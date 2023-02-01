@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des auteurices{% endblock %}
+
+{% block body %}
+{% include "_navbar.html.twig" %}
+
+    <h1 class="mt-5">Liste des auteurices</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for author in authors %}
+            <tr>
+                <td>{{ author.firstname }}</td>
+                <td>{{ author.lastname }}</td>
+                <td>
+                    <a class="m-2" href="{{ path('app_author_show', {'id': author.id}) }}">voir</a>
+                    <a class="m-2" href="{{ path('app_author_edit', {'id': author.id}) }}">modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">aucun auteurice enregistré·e</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_author_new') }}">Ajouter un·e auteurice</a>
+{% endblock %}
