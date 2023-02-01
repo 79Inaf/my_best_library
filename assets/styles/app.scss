@@ -1,3 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Solitreo&display=swap");
+
 // customize some Bootstrap variables
 
 @import "~bootstrap/scss/bootstrap";
+
+
+body {
+    // background-image: url(/assets/images/bg.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    font-family: 'Solitreo', cursive;
+    background-color: #a4893b;
+}
+
+.navbar {
+    border-bottom-style: double;
+}
