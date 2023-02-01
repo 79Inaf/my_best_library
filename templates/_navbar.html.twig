@@ -1,0 +1,11 @@
+ <nav class="navbar .bg-transparent">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Accueil</a>
+        {% if app.user %}
+            {{ app.user.email }}
+            <a class="navbar-brand" href="{{ path('app_logout') }}"> Se déconnecter</a>
+        {% else %}
+            <a class="navbar-brand" href="{{ path('app_login') }}"> Se connecter</a>
+        {% endif %}
+    </div>
+</nav>
