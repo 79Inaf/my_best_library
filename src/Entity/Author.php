@@ -87,4 +87,9 @@ class Author
 
         return $this;
     }
+
+    public function getFirstLastname(): ?string
+    {
+       return $this->getFirstname() . " " . $this->getLastname();
+    }
 }
