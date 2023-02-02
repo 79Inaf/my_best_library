@@ -12,13 +12,11 @@
       </div>
    </div>
 
-  
-   {% for book in books %}
-        {% include "home/_cardBook.html.twig" %}
-   {% endfor %}
-   
-   
-
-
-   
+   <section class="container text-center">
+      <div class="row justify-content-around">
+         {% for book in books %}
+            {% include "home/_cardBook.html.twig" %}
+         {% endfor %}
+      </div>
+   </section>
 {% endblock %}

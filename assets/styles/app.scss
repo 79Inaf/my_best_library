@@ -19,10 +19,10 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
-    color: var(--bs-table-color);
+    color: rgb(117, 6, 119);
+    // color: var(--bs-table-color);
     &:hover {
-        color: var(--bs-table-color);
+        color: rgb(117, 6, 119);
         font-weight: bold;
     }
 }
