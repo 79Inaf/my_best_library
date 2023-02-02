@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My best library{% endblock %}
+
+{% block body %}
+   {% include "_navbar.html.twig" %}
+   <h1 class="text-center mt-5">MY BEST LIBRARY</h1>
+
+   <div class="container text-center">
+      <div class="row justify-content-around"> 
+          <a class="mb-3" href="{{ path('app_home') }}">retour à l'accueil</a>
+      </div>
+   </div>
+
+  
+   {% for book in books %}
+        {% include "home/_cardBook.html.twig" %}
+   {% endfor %}
+   
+   
+
+
+   
+{% endblock %}

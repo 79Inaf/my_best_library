@@ -30,23 +30,23 @@ class ApiController extends AbstractController
         return $this->json($resultBooks);
     }
 
-    // #[Route('/api/searchBooks/', name: 'app_api_all')]
-    // public function index(BookRepository $bookRepository): Response
-    // {
-    //     $allBooks = $bookRepository->findAll();
+    #[Route('/api/searchBooks/', name: 'app_api_all')]
+    public function index(BookRepository $bookRepository): Response
+    {
+        $allBooks = $bookRepository->findAll();
 
-    //     $listBooks = [];
+        $listBooks = [];
 
-    //     foreach ($allBooks as $book) {
-    //         $listBooks[] = [
-    //             'html' => $this->render(
-    //                 'home/_cardBook.html.twig',
-    //                 [
-    //                     'book' => $book,
-    //                 ]
-    //             )
-    //        ];
-    //     }
-        // return $this->json($listBooks);
-    // }
+        foreach ($allBooks as $book) {
+            $listBooks[] = [
+                'html' => $this->render(
+                    'home/_cardBook.html.twig',
+                    [
+                        'book' => $book,
+                    ]
+                )
+            ];
+        }
+        return $this->json($listBooks);
+    }
 }
