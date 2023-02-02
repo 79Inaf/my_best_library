@@ -6,16 +6,29 @@
 
 
 body {
-    // background-image: url(/assets/images/bg.png);
-    // background-repeat: no-repeat;
-    // background-size: cover;
+    
     font-family: 'Solitreo', cursive;
     background-color: #a4893b;
-    margin: 2%;
+    margin: 1%;
+    min-height: 100vh;
 }
 
-.navbar {
-    border-bottom-style: double;
+.image-bg {
+    background-image: url("/assets/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.bg-user {
+    background-image: url("/assets/images/bguser1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+.navbar {    border-bottom-style: double;
 }
 
 a {
