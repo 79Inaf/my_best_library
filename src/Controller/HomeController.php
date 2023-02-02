@@ -15,9 +15,6 @@ class HomeController extends AbstractController
     {
 
         return $this->render('home/index.html.twig');
-        // return $this->render('home/index.html.twig', [
-        //     'books' => $bookRepository->findAll(),
-        // ]);
     }
 
     #[Route('/home/index/', name: 'app_home_index', methods: ['GET'])]
