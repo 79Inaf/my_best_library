@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Book;
 use App\Repository\BookRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -31,5 +32,12 @@ class HomeController extends AbstractController
         return $this->render('home/show.html.twig', [
             'book' => $book,
         ]);
+    }
+
+    #[IsGranted('ROLE_USER')]
+    #[Route('/home/user/', name: 'app_home_user')]
+    public function welcome(): Response
+    {
+        return $this->render('home/welcome_user.html.twig');
     }
 }

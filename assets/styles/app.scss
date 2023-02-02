@@ -6,16 +6,38 @@
 
 
 body {
-    // background-image: url(/assets/images/bg.png);
-    // background-repeat: no-repeat;
-    // background-size: cover;
+    
     font-family: 'Solitreo', cursive;
     background-color: #a4893b;
-    margin: 2%;
+    margin: 0%;
+    min-height: 100vh;
 }
 
-.navbar {
-    border-bottom-style: double;
+.image-bg {
+    background-image: url("/assets/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.bg-user {
+    background-image: url("/assets/images/bguser1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+// .bg-index-author{
+//     background-image: url("/assets/images/indexAuthor1.jpg");
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     min-height: 100vh;
+//     background-attachment: fixed;
+// }
+
+.navbar {    border-bottom-style: double;
 }
 
 a {
@@ -39,4 +61,9 @@ a {
 
 .book-card {
     width: 22rem;
+}
+
+.btn {
+    color: rgb(117, 6, 119);
+    --bs-btn-padding-x: 0;
 }

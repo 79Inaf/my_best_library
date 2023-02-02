@@ -1,6 +1,7 @@
  <nav class="navbar .bg-transparent">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">Accueil</a>
+        <a class="navbar-brand" href="/home/user/">Mon accueil</a>
+        <a class="navbar-brand" href="/">accueil public</a>
         {% if app.user %}
             <a class="navbar-brand" href="{{ path('app_home_user')}}">
             {{ app.user.email }} </a>

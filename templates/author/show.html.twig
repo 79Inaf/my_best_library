@@ -3,8 +3,8 @@
 {% block title %}Auteurice{% endblock %}
 
 {% block body %}
-{% include "_navbar.html.twig" %}
-
+{% include "_navbar_user.html.twig" %}
+<main class="m-2">
     <h1 class="mt-5 text-center">{{ author.firstname }} {{ author.lastname }}</h1>
 
     <table class="table">
@@ -49,5 +49,5 @@
     </table>
 
     <a href="{{ path('app_author_index') }}">Retour à la liste</a>
-
+</main>
 {% endblock %}

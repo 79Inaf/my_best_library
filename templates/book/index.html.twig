@@ -3,8 +3,8 @@
 {% block title %}Liste des livres{% endblock %}
 
 {% block body %}
-{% include "_navbar.html.twig" %}
-
+{% include "_navbar_user.html.twig" %}
+<main class="m-2">
     <h1 class="mt-5">Liste des livres</h1>
 
     <table class="table">
@@ -40,4 +40,5 @@
     </table>
 
     <a href="{{ path('app_book_new') }}">Ajouter un livre</a>
+</main>
 {% endblock %}
