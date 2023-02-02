@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Livre{% endblock %}
+
+{% block body %}
+{% include "_navbar.html.twig" %}
+
+    <section class="container text-center">
+        <div class="row"> 
+            <div class="card m-3 book-card">
+                <img src={{ book.picture }} class="card-img-top mt-2" alt="image livre">
+                <div class="card-body">
+                    <h5 class="card-title">{{ book.title }}</h5>
+                    <p class="card-text mt-3">{{ book.summary }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">1ère édition : {{ book.firstEdition }}</li>
+                    <li class="list-group-item">Genre : {{ book.kind }}</li>
+                    <li class="list-group-item">Nombres de pages : {{ book.numberPages }}</li>
+                </ul>
+                <div class="card-body">
+                    <p class="card-text mt-3">Mon avis : {{ book.advice }}</p>
+                </div>
+                <div class="card-body">
+                  <a href="{{ path('app_home') }}">Retour à l'accueil</a>
+               </div>
+            </div>
+        </div>
+   </section>
+{% endblock %}

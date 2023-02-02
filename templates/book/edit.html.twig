@@ -3,7 +3,9 @@
 {% block title %}Modifier le livre{% endblock %}
 
 {% block body %}
-    <h1>Modifier le livre</h1>
+{% include "_navbar.html.twig" %}
+
+    <h1 class="mt-5">Modifier le livre</h1>
 
     {{ include('book/_form.html.twig', {'button_label': 'Modifier'}) }}
 

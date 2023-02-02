@@ -3,18 +3,17 @@
 {% block title %}Liste des livres{% endblock %}
 
 {% block body %}
-    <h1>Liste des livres</h1>
+{% include "_navbar.html.twig" %}
+
+    <h1 class="mt-5">Liste des livres</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Titre</th>
-                <th>Résumé</th>
                 <th>1ère édition</th>
                 <th>Genre</th>
                 <th>Nombre de pages</th>
-                <th>Résumé</th>
-                <th>Image</th>
                 <th>Auteurice</th>
                 <th>Actions</th>                
             </tr>
@@ -23,17 +22,14 @@
         {% for book in books %}
             <tr>
                 <td>{{ book.title }}</td>
-                <td>{{ book.summary }}</td>
                 <td>{{ book.firstEdition }}</td>
                 <td>{{ book.kind }}</td>
                 <td>{{ book.numberPages }}</td>
-                <td>{{ book.advice }}</td>
-                <td>{{ book.picture }}</td>
+                <td>{{ book.author.lastname }}</td>
                 <td>
                     <a href="{{ path('app_book_show', {'id': book.id}) }}">Voir</a>
                     <a href="{{ path('app_book_edit', {'id': book.id}) }}">Modifier</a>
-                </td>
-                <td>{{ book.author.lastname }}</td>
+                </td>                
             </tr>
         {% else %}
             <tr>
