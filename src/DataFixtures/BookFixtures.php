@@ -33,7 +33,7 @@ class BookFixtures extends Fixture
                 1000, 'Un chef d\'oeuvre', 'https://images2.medimops.eu/product/d7ad61/M02258034965-large.jpg',
                 'Auel'],
             ['L\'assassin royal - tome2 - l\'apprenti assassin ', 'Lorsque le jeune Fitz est conduit à la
-            cour des Six-Duchés,
+                cour des Six-Duchés,
                 il ne sait pas encore que sa vie -
                 et celle du royaume tout entier - va s\'en trouver bouleversée. Le roi-servant Chevalerie, père de
                 cet enfant illégitime, devra renoncer au trône
@@ -41,7 +41,7 @@ class BookFixtures extends Fixture
                 roman de fantasy au monde ! 1er tome
                 d\'une série à dévorer', 'https://www.babelio.com/couv/CVT_15529_834672.jpg', 'Hobb'],
             ['Les enfants de la terre intégral : Le clan de l\'ours des cavernes, La vallée des chevaux,
-            Les chasseurs de mammouths',
+                Les chasseurs de mammouths',
                 'Il y a 35 000 ans, une longue période
                 glaciaire s\'achève et la Terre commence à se réchauffer. L\'homme s\'est peu à peu dégagé
                 de la bête et
