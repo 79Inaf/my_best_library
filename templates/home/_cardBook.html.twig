@@ -1,0 +1,15 @@
+<div class="card m-3 book-card">
+   <img src={{ book.picture }} class="card-img-top mt-2" alt="...">
+      <div class="card-body">
+         <h5 class="card-title">{{ book.title }}</h5>
+         <p class="card-text cut overflow-ellipsis mt-3">{{ book.summary }}</p>
+      </div>
+   <ul class="list-group list-group-flush">
+      <li class="list-group-item">1ère édition : {{ book.firstEdition }}</li>
+      <li class="list-group-item">Genre : {{ book.kind }}</li>
+      <li class="list-group-item">Nombres de pages : {{ book.numberPages }}</li>
+   </ul>
+   <div class="card-body">
+      <a href="{{ path('app_home_show', {'id': book.id}) }}">Voir en détail</a>
+   </div>
+</div>
