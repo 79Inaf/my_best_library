@@ -26,3 +26,16 @@ a {
         font-weight: bold;
     }
 }
+
+.cut {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.overflow-ellipsis {
+    text-overflow: ellipsis;
+}
+
+.book-card {
+    width: 22rem;
+}

@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des livres{% endblock %}
+
+{% block body %}
+{% include "_navbar.html.twig" %}
+
+    <h1 class="mt-5">Liste des livres</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>1ère édition</th>
+                <th>Genre</th>
+                <th>Nombre de pages</th>
+                <th>Auteurice</th>
+                <th>Actions</th>                
+            </tr>
+        </thead>
+        <tbody>
+        {% for book in books %}
+            <tr>
+                <td>{{ book.title }}</td>
+                <td>{{ book.firstEdition }}</td>
+                <td>{{ book.kind }}</td>
+                <td>{{ book.numberPages }}</td>
+                <td>{{ book.author.lastname }}</td>
+                <td>
+                    <a href="{{ path('app_book_show', {'id': book.id}) }}">Voir</a>
+                    <a href="{{ path('app_book_edit', {'id': book.id}) }}">Modifier</a>
+                </td>                
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">pas de livre enregistré</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_book_new') }}">Ajouter un livre</a>
+{% endblock %}
