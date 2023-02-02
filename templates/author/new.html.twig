@@ -4,10 +4,11 @@
 
 {% block body %}
 {% include "_navbar_user.html.twig" %}
-
+<main class="m-2">
     <h1 class="mt-5">Créer un·e nouvel·le auteurice</h1>
 
     {{ include('author/_form.html.twig') }}
 
     <a href="{{ path('app_author_index') }}">Retour à la liste</a>
+</main>
 {% endblock %}

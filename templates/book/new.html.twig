@@ -4,10 +4,11 @@
 
 {% block body %}
 {% include "_navbar_user.html.twig" %}
-
+<main class="m-2">
     <h1 class="mt-5">Ajouter un nouveau livre</h1>
 
     {{ include('book/_form.html.twig') }}
 
     <a href="{{ path('app_book_index') }}">Retour à la liste des livres</a>
+</main>
 {% endblock %}
